@@ -51,6 +51,15 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sticky-key";
+            label = "NEW_BEHAVIOR";
+            bindings = <&none>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <1000>;
+        };
     };
 
     macros {
@@ -87,8 +96,6 @@
 &kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B                 &kp LBKT     &kp RBKT  &kp N   &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                                 &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LA(LEFT_SHIFT)  &kp SPACE    &kp RET   &mo 2   &kp MINUS  &kp EQUAL
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
