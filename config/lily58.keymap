@@ -52,10 +52,10 @@
             bindings = <&kp>, <&kp>;
         };
 
-        new_behavior: new_behavior {
+        right_sticky_quick: right_sticky_quick {
             compatible = "zmk,behavior-sticky-key";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>;
+            label = "RIGHT_STICKY_QUICK";
+            bindings = <&kp>;
             #binding-cells = <1>;
             quick-release;
             release-after-ms = <1000>;
@@ -73,7 +73,7 @@
         dot_space_sticky_shift: dot_space_sticky_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SLASH &kp SPACE &sk LEFT_SHIFT>;
+            bindings = <&kp SLASH &kp SPACE &right_sticky_quick LEFT_SHIFT>;
             label = "DOT_SPACE_STICKY_SHIFT";
         };
     };
