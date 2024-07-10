@@ -128,7 +128,7 @@
             bindings = <
 &trans  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans             &trans           &trans                              &trans             &trans    &trans                   &trans     &trans           &trans
 &trans  &trans           &trans             &trans             &trans           &kp LS(HOME)                        &kp LS(END)        &trans    &kp UP_ARROW             &trans     &kp PRINTSCREEN  &trans
-&trans  &trans           &kp LC(LS(S))      &trans             &trans           &kp HOME                            &kp END            &kp LEFT  &kp DOWN                 &kp RIGHT  &trans           &trans
+&trans  &trans           &kp LS(LG(S))      &trans             &trans           &kp HOME                            &kp END            &kp LEFT  &kp DOWN                 &kp RIGHT  &trans           &trans
 &trans  &trans           &trans             &comma_space       &trans           &kp LC(LS(LEFT))  &trans    &trans  &kp LC(LS(RIGHT))  &trans    &dot_space_sticky_shift  &trans     &trans           &kp LC(LS(Z))
                                             &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &trans    &trans  &trans             &trans    &trans
             >;
