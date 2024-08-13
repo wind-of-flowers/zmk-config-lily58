@@ -76,6 +76,20 @@
             bindings = <&kp SLASH &kp SPACE &right_sticky_quick LEFT_SHIFT>;
             label = "DOT_SPACE_STICKY_SHIFT";
         };
+
+        one_quotes: one_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp SINGLE_QUOTE &kp LA(LEFT_SHIFT)>;
+            label = "ONE_QUOTES";
+        };
+
+        double_quotes: double_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &kp DOUBLE_QUOTES &kp LA(LEFT_SHIFT)>;
+            label = "DOUBLE_QUOTES";
+        };
     };
 
     keymap {
@@ -107,11 +121,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F11    &kp F1  &kp F2  &kp F3         &kp F4      &kp F5                               &kp F6         &kp F7  &kp F8     &kp F9  &kp F10  &kp F12
-&trans     &trans  &trans  &trans         &trans      &trans                               &trans         &trans  &trans     &trans  &trans   &kp RIGHT_BRACKET
-&kp GRAVE  &trans  &trans  &trans         &trans      &trans                               &trans         &trans  &trans     &trans  &trans   &kp TILDE
-&trans     &trans  &trans  &kp LS(SLASH)  &trans      &trans  &trans    &trans             &trans         &trans  &kp SLASH  &trans  &trans   &kp PIPE
-                           &kp C_PREV     &kp C_NEXT  &trans  &trans    &kp LC(BACKSPACE)  &kp BACKSPACE  &trans  &trans
+&kp F11    &kp F1       &kp F2          &kp F3         &kp F4      &kp F5                               &kp F6         &kp F7  &kp F8     &kp F9  &kp F10  &kp F12
+&trans     &trans       &trans          &trans         &trans      &trans                               &trans         &trans  &trans     &trans  &trans   &kp RIGHT_BRACKET
+&kp GRAVE  &one_quotes  &double_quotes  &trans         &trans      &trans                               &trans         &trans  &trans     &trans  &trans   &kp TILDE
+&trans     &trans       &trans          &kp LS(SLASH)  &trans      &trans  &trans    &trans             &trans         &trans  &kp SLASH  &trans  &trans   &kp PIPE
+                                        &kp C_PREV     &kp C_NEXT  &trans  &trans    &kp LC(BACKSPACE)  &kp BACKSPACE  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
